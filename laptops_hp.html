@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear-UP | HP</title>
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+
+<body data-page="hp">
+    <header>
+        <div class="container top-nav">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Gear-UP</span>
+            </a>
+            <form action="" class="search">
+                <input type="search" placeholder="Search for products...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="cart_header">
+                <div onclick="openCart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>My Cart:</p>
+                    <p class="price_cart_Head">0 EGP</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="links container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                    <img class="logo_menu" src="img/logo-black.png" alt="">
+                    <li class="active"><a href="index.html">home</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#" onclick="toggleDropdown()">Laptop <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="lenovo_products.html">Lenovo</a></li>
+                            <li><a href="laptops_hp.html">HP</a></li>
+                            <li><a href="laptops_mac.html">Mac</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="loging_signup">
+                    <a href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="signup_page.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Start Cart -->
+    <div class="cart">
+        <span class="loading-indicator" style="display: none;">Adding....</span>
+        <div class="top_cart">
+            <h3>My cart <span class="count_item_cart">(0 Item in Cart)</span></h3>
+            <span onclick="closeCart()" class="closeCart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart"></div>
+        <div class="bottom_Cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price_cart_total">0 EGP</p>
+            </div>
+            <div class="button_Cart">
+                <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+                <button onclick="closeCart()" class="btn_cart trans_bg">Shop more</button>
+            </div>
+        </div>
+    </div>
+    <!-- End Cart -->
+
+    <div class="top_page">
+        <div class="container">
+            <h1>Versatile. Powerful. Trusted – Unleash Your Potential with HP Laptops</h1>
+            <p>Discover HP laptops designed for work, play, and everything in between. From sleek ultrabooks to
+                high-performance machines, HP delivers reliability and innovation for every user.</p>
+        </div>
+    </div>
+
+    <section class="all_products">
+        <div class="container">
+            <div class="filter_wrapper" role="dialog" aria-labelledby="filter_title">
+                <div class="filter desktop_filter">
+                    <div class="filter_header">
+                        <h2 id="filter_title">Filter Products</h2>
+                    </div>
+                    <div class="filter_content">
+                        <div class="filter_item">
+                            <h4>Sort by Price</h4>
+                            <div class="content">
+                                <label class="item">
+                                    <span>Low to High</span>
+                                    <input type="radio" name="sort-price" value="low-to-high"
+                                        aria-label="Sort by price: Low to High">
+                                </label>
+                                <label class="item">
+                                    <span>High to Low</span>
+                                    <input type="radio" name="sort-price" value="high-to-low"
+                                        aria-label="Sort by price: High to Low">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter_item">
+                            <h4>Screen Size</h4>
+                            <div class="content">
+                                <label class="item">
+                                    <span>14 inches</span>
+                                    <input type="checkbox" value="14 inches" aria-label="Screen size: 14 inches">
+                                </label>
+                                <label class="item">
+                                    <span>15.6 inches</span>
+                                    <input type="checkbox" value="15.6 inches" aria-label="Screen size: 15.6 inches">
+                                </label>
+                                <label class="item">
+                                    <span>16 inches</span>
+                                    <input type="checkbox" value="16 inches" aria-label="Screen size: 16 inches">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter_item">
+                            <h4>Processor</h4>
+                            <div class="content">
+                                <label class="item">
+                                    <span>Intel Core Ultra 5</span>
+                                    <input type="checkbox" value="Intel Core Ultra 5"
+                                        aria-label="Processor: Intel Core Ultra 5">
+                                </label>
+                                <label class="item">
+                                    <span>Intel Core Ultra 7</span>
+                                    <input type="checkbox" value="Intel Core Ultra 7"
+                                        aria-label="Processor: Intel Core Ultra 7">
+                                </label>
+                                <label class="item">
+                                    <span>Intel Core i5</span>
+                                    <input type="checkbox" value="Intel Core i5" aria-label="Processor: Intel Core i5">
+                                </label>
+                                <label class="item">
+                                    <span>Intel Core i7</span>
+                                    <input type="checkbox" value="Intel Core i7" aria-label="Processor: Intel Core i7">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter_item">
+                            <h4>RAM</h4>
+                            <div class="content">
+                                <label class="item">
+                                    <span>8 GB</span>
+                                    <input type="checkbox" value="8 GB" aria-label="RAM: 8 GB">
+                                </label>
+                                <label class="item">
+                                    <span>12 GB</span>
+                                    <input type="checkbox" value="12 GB" aria-label="RAM: 12 GB">
+                                </label>
+                                <label class="item">
+                                    <span>16 GB</span>
+                                    <input type="checkbox" value="16 GB" aria-label="RAM: 16 GB">
+                                </label>
+                                <label class="item">
+                                    <span>32 GB</span>
+                                    <input type="checkbox" value="32 GB" aria-label="RAM: 32 GB">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter_actions">
+                        <button class="btn_apply" onclick="applyFilters('hp', 'productsHP_dev')">Apply Filters</button>
+                        <button class="btn_clear" onclick="clearFilters('hp', 'productsHP_dev')">Clear Filters</button>
+                    </div>
+                </div>
+                <div class="filter mobile_filter" role="dialog" aria-labelledby="mobile_filter_title">
+                    <div class="filter_header">
+                        <h2 id="mobile_filter_title">Choose Filters</h2>
+                        <button class="filter_close" onclick="open_close_filter()" aria-label="Close filter">
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="filter_content">
+                        <div class="filter_category">
+                            <h4>Sort by Price</h4>
+                            <div class="filter_options clear_options">
+                                <button class="filter_option" data-category="sort-price" data-value="low-to-high">Low to
+                                    High</button>
+                                <button class="filter_option" data-category="sort-price" data-value="high-to-low">High
+                                    to Low</button>
+                            </div>
+                        </div>
+                        <div class="filter_category">
+                            <h4>Screen Size</h4>
+                            <div class="filter_options clear_options">
+                                <button class="filter_option" data-category="screen-size"
+                                    data-value="14 inches">14"</button>
+                                <button class="filter_option" data-category="screen-size"
+                                    data-value="15.6 inches">15.6"</button>
+                                <button class="filter_option" data-category="screen-size"
+                                    data-value="16 inches">16"</button>
+                            </div>
+                        </div>
+                        <div class="filter_category">
+                            <h4>Processor</h4>
+                            <div class="filter_options clear_options">
+                                <button class="filter_option" data-category="processor"
+                                    data-value="Intel Core Ultra 5">Ultra 5</button>
+                                <button class="filter_option" data-category="processor"
+                                    data-value="Intel Core Ultra 7">Ultra 7</button>
+                                <button class="filter_option" data-category="processor"
+                                    data-value="Intel Core i5">i5</button>
+                                <button class="filter_option" data-category="processor"
+                                    data-value="Intel Core i7">i7</button>
+                            </div>
+                        </div>
+                        <div class="filter_category">
+                            <h4>RAM</h4>
+                            <div class="filter_options clear_options">
+                                <button class="filter_option" data-category="ram" data-value="8 GB">8GB</button>
+                                <button class="filter_option" data-category="ram" data-value="12 GB">12GB</button>
+                                <button class="filter_option" data-category="ram" data-value="16 GB">16GB</button>
+                                <button class="filter_option" data-category="ram" data-value="32 GB">32GB</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter_actions">
+                        <button class="btn_apply" onclick="applyFilters('hp', 'productsHP_dev')">Apply</button>
+                        <button class="btn_clear" onclick="clearFilters('hp', 'productsHP_dev')">Clear</button>
+                        <button class="btn_close_mobile" onclick="open_close_filter()"
+                            aria-label="Close filter">Close</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn_filter floating" onclick="open_close_filter()" aria-label="Open filter options">
+                <i class="fa-solid fa-filter"></i>
+            </button>
+            <div class="filter_overlay"></div>
+
+            <div id="productsHP_dev" class="product_dev1">
+                <!-- Products will be populated here -->
+            </div>
+        </div>
+    </section>
+
+    <div class="back_to_top">
+        <p>back to top</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="img/logo-white.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline Free 24/24:</h5>
+                        <h6>(+20) 109 330 2746</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Laptops</h4>
+                <div class="links">
+                    <a href="laptops_hp.html">HP Laptops</a>
+                    <a href="lenovo_products.html">Lenovo Laptops</a>
+                    <a href="laptops_mac.html">Apple MAC Laptops</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Menu</h4>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About US</a>
+                    <a href="contact.html">contact US</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>Copyright &copy; <span>Topico.</span> all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/swiper.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/showProduct_Filter.js"></script>
+    <script src="js/cart_shop.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/itemProduct.js"></script>
+</body>
+
+</html>

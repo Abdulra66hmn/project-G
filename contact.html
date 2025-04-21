@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear-UP | Contact Us</title>
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Start Header-->
+    <header>
+        <div class="container top-nav">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Gear-UP</span>
+            </a>
+            <form action="" class="search">
+                <input type="search" placeholder="Search for products...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="cart_header">
+                <div onclick="openCart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>My Cart:</p>
+                    <p class="price_cart_Head">0 EGP</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="links container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                    <img class="logo_menu" src="img/logo-black.png" alt="">
+                    <li><a href="index.html">home</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#" onclick="toggleDropdown()">Laptop <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="lenovo_products.html">Lenovo</a></li>
+                            <li><a href="laptops_hp.html">HP</a></li>
+                            <li><a href="laptops_mac.html">Mac</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">about us</a></li>
+                    <li class="active"><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="loging_signup">
+                    <a href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="signup_page.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Start Cart -->
+    <div class="cart">
+        <span class="loading-indicator" style="display: none;">Adding....</span>
+        <div class="top_cart">
+            <h3>My cart <span class="count_item_cart">(0 Item in Cart)</span></h3>
+            <span onclick="closeCart()" class="closeCart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart"></div>
+        <div class="bottom_Cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price_cart_total">0 EGP</p>
+            </div>
+            <div class="button_Cart">
+                <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+                <button onclick="closeCart()" class="btn_cart trans_bg">Shop more</button>
+            </div>
+        </div>
+    </div>
+    <!-- End Cart -->
+
+    <!-- Start Contact Us Section -->
+    <section class="contact-us">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form" action="submit_contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here"
+                                required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                            <button type="reset" class="btn-reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <span>123 Tech Street, Cairo, Egypt</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(+20) 109 330 2746</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>support@gearup.com</span>
+                        </li>
+                    </ul>
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Us Section -->
+
+    <!--Start Footer-->
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="img/logo-white.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline Free 24/24:</h5>
+                        <h6>(+20) 109 330 2746</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Laptops</h4>
+                <div class="links">
+                    <a href="laptops_hp.html">HP Laptops</a>
+                    <a href="lenovo_products.html">Lenovo Laptops</a>
+                    <a href="laptops_mac.html">Apple MAC Laptops</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Menu</h4>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About US</a>
+                    <a href="contact.html">contact US</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>Copyright &copy; <span>Topico.</span> all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!--End Footert-->
+    <!-- JavaScript Files -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/cart_shop.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

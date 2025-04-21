@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/login_regs.css">
+</head>
+
+<body>
+    <!--Start Header-->
+    <header>
+        <div class="container top-nav">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Gear-UP</span>
+            </a>
+            <form action="" class="search">
+                <input type="search" placeholder="Search for products...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="cart_header">
+                <div onclick="openCart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>My Cart:</p>
+                    <p class="price_cart_Head">0 EGP</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="links container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                    <img class="logo_menu" src="img/logo-black.png" alt="">
+                    <li class="active"><a href="index.html">home</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#" onclick="toggleDropdown()">Laptop <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="lenovo_products.html">Lenovo</a></li>
+                            <li><a href="laptops_hp.html">HP</a></li>
+                            <li><a href="laptops_mac.html">Mac</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="loging_signup">
+                    <a href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="signup_page.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--End Header-->
+
+    <!--Start Cart-->
+    <div class="cart ">
+        <div class="top_cart">
+            <h3>My cart <span class="count_item_cart">(0Item in Cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart">
+        </div>
+        <div class="bottom_Cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+            <div class="button_Cart">
+                <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+                <button onclick="close_cart()" class="btn_cart trans_bg">Shop more</button>
+            </div>
+        </div>
+    </div>
+    <!--End Cart-->
+
+    <!--Start Section Log in-->
+    <section class="signin sec_form">
+        <div class="form_container">
+            <p class="title">Welcome back</p>
+
+            <form action="" class="form">
+
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="password">
+                <p class="page-link">
+                    <a href="#" class="page-link-label">Forgot Password?</a>
+                </p>
+
+                <button class="form-btn">Login</button>
+
+            </form>
+
+            <p class="sign-up-label">
+                Don't have an account? <a href="#" class="sign-up-link">sign up</a>
+            </p>
+
+            <div class="buttons-container">
+                <div class="apple-login-buuton">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>Login with Apple</span>
+                </div>
+
+                <div class="google-login-button">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Login with Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Section Log in-->
+
+    <!--Start Header-->
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="img/logo-white.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline Free 24/24:</h5>
+                        <h6>(+20) 109 330 2746</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Laptops</h4>
+                <div class="links">
+                    <a href="laptops_hp.html">HP Laptops</a>
+                    <a href="lenovo_products.html">Lenovo Laptops</a>
+                    <a href="laptops_mac.html">Apple MAC Laptops</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Menu</h4>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About US</a>
+                    <a href="contact.html">contact US</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>Copyright &copy; <span>Topico.</span> all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!--End Header-->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

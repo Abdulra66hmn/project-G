@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!--Start Header-->
+    <header>
+        <div class="container top-nav">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Gear-UP</span>
+            </a>
+            <form action="" class="search">
+                <input type="search" placeholder="Search for products...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="cart_header">
+                <div onclick="openCart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>My Cart:</p>
+                    <p class="price_cart_Head">0 EGP</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="links container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                    <img class="logo_menu" src="img/logo-black.png" alt="">
+                    <li class="active"><a href="index.html">home</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#" onclick="toggleDropdown()">Laptop <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="lenovo_products.html">Lenovo</a></li>
+                            <li><a href="laptops_hp.html">HP</a></li>
+                            <li><a href="laptops_mac.html">Mac</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="loging_signup">
+                    <a href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="signup_page.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--End Header-->
+
+    <!--Start Cart-->
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My cart <span class="count_item_cart">(0 Item in Cart)</span></h3>
+            <span onclick="closeCart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items_in_cart"></div>
+        <div class="bottom_Cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price_cart_total">0 EGP</p>
+            </div>
+            <div class="button_Cart">
+                <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+                <button onclick="closeCart()" class="btn_cart trans_bg">Shop more</button>
+            </div>
+        </div>
+    </div>
+    <!--End Cart-->
+
+    <!--Start section order-confirmation -->
+    <section class="order-confirmation">
+        <div class="container">
+            <h1>Thank You for Your Order!</h1>
+            <p class="confirmation-message">Your order has been successfully placed. You'll receive a confirmation email
+                shortly.</p>
+
+            <div class="order-details">
+                <h2>Order Details</h2>
+                <p><strong>Order Number:</strong> <span id="order-number"></span></p>
+                <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+
+                <h3>Delivery Information</h3>
+                <p><strong>Name:</strong> <span id="delivery-name"></span></p>
+                <p><strong>Email:</strong> <span id="delivery-email"></span></p>
+                <p><strong>Address:</strong> <span id="delivery-address"></span></p>
+                <p><strong>Phone:</strong> <span id="delivery-phone"></span></p>
+                <p><strong>Coupon Code:</strong> <span id="coupon-code"></span></p>
+                <p><strong>Payment Method:</strong> <span> Cash on Delivery</span></p>
+
+                <h3>Order Items</h3>
+                <div id="order-items" class="items"></div>
+
+                <div class="total">
+                    <p>Total</p>
+                    <span id="order-total"></span>
+                </div>
+            </div>
+
+            <div class="continue-shopping">
+                <a href="index.html" class="btn_cart">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+    <!--Start section order-confirmation -->
+
+    <!--Start Footer-->
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="img/logo-white.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline Free 24/24:</h5>
+                        <h6>(+20) 109 330 2746</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Laptops</h4>
+                <div class="links">
+                    <a href="laptops_hp.html">HP Laptops</a>
+                    <a href="lenovo_products.html">Lenovo Laptops</a>
+                    <a href="laptops_mac.html">Apple MAC Laptops</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Menu</h4>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About US</a>
+                    <a href="contact.html">contact US</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>Copyright &copy; <span>Topico.</span> all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!--End Header-->
+
+    <!-- Cart Script -->
+    <script src="cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

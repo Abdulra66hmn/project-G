@@ -1,0 +1,184 @@
+
+
+/* تنسيق قسم Contact Us */
+.contact-us {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.contact-us .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.contact-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form h3,
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--main-color, #e74c3c);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit {
+    background: var(--main-color, #e74c3c);
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background: #c0392b;
+}
+
+.btn-reset {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background: #e0e0e0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.contact-info ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.contact-info ul li i {
+    color: var(--main-color, #e74c3c);
+    font-size: 1.2rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-media h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #333;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--main-color, #e74c3c);
+}
+
+
+/* تنسيق Responsive */
+@media (max-width: 768px) {
+
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        min-width: 100%;
+    }
+
+    .cart {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-us .section-title {
+        font-size: 2rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+}
